@@ -1,0 +1,265 @@
+label encoder coco_df1
+
+#Label Encoder.
+le_sweet = LabelEncoder()
+coco_cdf['sweet'] = le_sweet.fit_transform(coco_cdf['sweet'])
+le_sweet.classes_
+
+le_nutty = LabelEncoder()
+coco_cdf['nutty'] = le_nutty.fit_transform(coco_cdf['nutty'])
+le_nutty.classes_
+
+le_cocoa = LabelEncoder()
+coco_cdf['cocoa'] = le_cocoa.fit_transform(coco_cdf['cocoa'])
+le_cocoa.classes_
+
+le_roasty = LabelEncoder()
+coco_cdf['roasty'] = le_roasty.fit_transform(coco_cdf['roasty'])
+le_roasty.classes_
+
+le_earthy = LabelEncoder()
+coco_cdf['earthy'] = le_earthy.fit_transform(coco_cdf['earthy'])
+le_earthy.classes_
+
+creamy = LabelEncoder()
+coco_cdf['creamy'] = creamy.fit_transform(coco_cdf['creamy'])
+creamy.classes_
+
+sandy = LabelEncoder()
+coco_cdf['sandy'] = sandy.fit_transform(coco_cdf['sandy'])
+sandy.classes_
+
+fatty = LabelEncoder()
+coco_cdf['fatty'] = fatty.fit_transform(coco_cdf['fatty'])
+fatty.classes_
+
+floral = LabelEncoder()
+coco_cdf['floral'] = floral.fit_transform(coco_cdf['floral'])
+floral.classes_
+
+intense = LabelEncoder()
+coco_cdf['intense'] = intense.fit_transform(coco_cdf['intense'])
+intense.classes_
+
+spicy = LabelEncoder()
+coco_cdf['spicy'] = spicy.fit_transform(coco_cdf['spicy'])
+spicy.classes_
+
+sour = LabelEncoder()
+coco_cdf['sour'] = sour.fit_transform(coco_cdf['sour'])
+sour.classes_
+
+vanilla = LabelEncoder()
+coco_cdf['vanilla'] = vanilla.fit_transform(coco_cdf['vanilla'])
+vanilla.classes_
+
+fruit = LabelEncoder()
+coco_cdf['fruit'] = fruit.fit_transform(coco_cdf['fruit'])
+fruit.classes_
+
+molasses = LabelEncoder()
+coco_cdf['molasses'] = molasses.fit_transform(coco_cdf['molasses'])
+molasses.classes_
+
+woody = LabelEncoder()
+coco_cdf['woody'] = woody.fit_transform(coco_cdf['woody'])
+woody.classes_
+
+sticky = LabelEncoder()
+coco_cdf['sticky'] = sticky.fit_transform(coco_cdf['sticky'])
+sticky.classes_
+
+coffee = LabelEncoder()
+coco_cdf['coffee'] = coffee.fit_transform(coco_cdf['coffee'])
+coffee.classes_
+
+rich = LabelEncoder()
+coco_cdf['rich'] = rich.fit_transform(coco_cdf['rich'])
+rich.classes_
+
+dryfruit = LabelEncoder()
+coco_cdf['dried.fruit'] = dryfruit.fit_transform(coco_cdf['dried.fruit'])
+dryfruit.classes_
+
+ingredient_Beans = LabelEncoder()
+coco_cdf['ingredient_Beans'] = ingredient_Beans.fit_transform(coco_cdf['ingredient_Beans'])
+ingredient_Beans.classes_
+
+ingredient_Sugar = LabelEncoder()
+coco_cdf['ingredient_Sugar'] = ingredient_Sugar.fit_transform(coco_cdf['ingredient_Sugar'])
+ingredient_Sugar.classes_
+
+ingredient_Cocoa_Butter = LabelEncoder()
+coco_cdf['ingredient_Cocoa_Butter'] = ingredient_Cocoa_Butter.fit_transform(coco_cdf['ingredient_Cocoa_Butter'])
+ingredient_Cocoa_Butter.classes_
+
+ingredient_vanilla = LabelEncoder()
+coco_cdf['ingredient_vanilla'] = ingredient_vanilla.fit_transform(coco_cdf['ingredient_vanilla'])
+ingredient_vanilla.classes_
+
+ingredient_lecithin = LabelEncoder()
+coco_cdf['ingredient_lecithin'] = ingredient_lecithin.fit_transform(coco_cdf['ingredient_lecithin'])
+ingredient_lecithin.classes_
+
+ingredient_salt = LabelEncoder()
+coco_cdf['ingredient_salt'] = ingredient_salt.fit_transform(coco_cdf['ingredient_salt'])
+ingredient_salt.classes_
+
+coco_cdf['ingredient_Sweetener'] = coco_cdf['ingredient_Sweetener'].map({"Yes": 1})
+
+
+
+Scoring_data
+
+score_df = pd.read_csv(f'C:\\Users\\rohit\\Downloads\\scoringData.csv')
+
+score_df.head()
+
+score_df.isnull().sum()
+
+score_df = score_df.fillna(0)
+
+score_df['number_of_ingredients'] = score_df['number_of_ingredients'].astype(int)
+
+score_df['number_of_ingredients'] = score_df['number_of_ingredients']+1
+
+score_df.head()
+
+Label encoder For score_df
+
+le_sweet = LabelEncoder()
+score_df['sweet'] = le_sweet.fit_transform(score_df['sweet'])
+le_sweet.classes_
+
+le_nutty = LabelEncoder()
+score_df['nutty'] = le_nutty.fit_transform(score_df['nutty'])
+le_nutty.classes_
+
+le_cocoa = LabelEncoder()
+score_df['cocoa'] = le_cocoa.fit_transform(score_df['cocoa'])
+le_cocoa.classes_
+
+le_roasty = LabelEncoder()
+score_df['roasty'] = le_roasty.fit_transform(score_df['roasty'])
+le_roasty.classes_
+
+le_earthy = LabelEncoder()
+score_df['earthy'] = le_earthy.fit_transform(score_df['earthy'])
+le_earthy.classes_
+
+creamy = LabelEncoder()
+score_df['creamy'] = creamy.fit_transform(score_df['creamy'])
+creamy.classes_
+
+sandy = LabelEncoder()
+score_df['sandy'] = sandy.fit_transform(score_df['sandy'])
+sandy.classes_
+
+fatty = LabelEncoder()
+score_df['fatty'] = fatty.fit_transform(score_df['fatty'])
+fatty.classes_
+
+floral = LabelEncoder()
+score_df['floral'] = floral.fit_transform(score_df['floral'])
+floral.classes_
+
+intense = LabelEncoder()
+score_df['intense'] = intense.fit_transform(score_df['intense'])
+intense.classes_
+
+spicy = LabelEncoder()
+score_df['spicy'] = spicy.fit_transform(score_df['spicy'])
+spicy.classes_
+
+sour = LabelEncoder()
+score_df['sour'] = sour.fit_transform(score_df['sour'])
+sour.classes_
+
+vanilla = LabelEncoder()
+score_df['vanilla'] = vanilla.fit_transform(score_df['vanilla'])
+vanilla.classes_
+
+fruit = LabelEncoder()
+score_df['fruit'] = fruit.fit_transform(score_df['fruit'])
+fruit.classes_
+
+molasses = LabelEncoder()
+score_df['molasses'] = molasses.fit_transform(score_df['molasses'])
+molasses.classes_
+
+woody = LabelEncoder()
+score_df['woody'] = woody.fit_transform(score_df['woody'])
+woody.classes_
+
+sticky = LabelEncoder()
+score_df['sticky'] = sticky.fit_transform(score_df['sticky'])
+sticky.classes_
+
+coffee = LabelEncoder()
+score_df['coffee'] = coffee.fit_transform(score_df['coffee'])
+coffee.classes_
+
+rich = LabelEncoder()
+score_df['rich'] = rich.fit_transform(score_df['rich'])
+rich.classes_
+
+dryfruit = LabelEncoder()
+score_df['dried.fruit'] = dryfruit.fit_transform(score_df['dried.fruit'])
+dryfruit.classes_
+
+ingredient_Beans = LabelEncoder()
+score_df['ingredient_Beans'] = ingredient_Beans.fit_transform(score_df['ingredient_Beans'])
+ingredient_Beans.classes_
+
+ingredient_Sugar = LabelEncoder()
+score_df['ingredient_Sugar'] = ingredient_Sugar.fit_transform(score_df['ingredient_Sugar'])
+ingredient_Sugar.classes_
+
+ingredient_Cocoa_Butter = LabelEncoder()
+score_df['ingredient_Cocoa_Butter'] = ingredient_Cocoa_Butter.fit_transform(score_df['ingredient_Cocoa_Butter'])
+ingredient_Cocoa_Butter.classes_
+
+ingredient_vanilla = LabelEncoder()
+score_df['ingredient_vanilla'] = ingredient_vanilla.fit_transform(score_df['ingredient_vanilla'])
+ingredient_vanilla.classes_
+
+ingredient_lecithin = LabelEncoder()
+score_df['ingredient_lecithin'] = ingredient_lecithin.fit_transform(score_df['ingredient_lecithin'])
+ingredient_lecithin.classes_
+
+ingredient_salt = LabelEncoder()
+score_df['ingredient_salt'] = ingredient_salt.fit_transform(score_df['ingredient_salt'])
+ingredient_salt.classes_
+
+score_df['ingredient_Sweetener'] = score_df['ingredient_Sweetener'].map({"Yes": 1})
+
+
+score_df.head()
+
+score_df = score_df.drop(labels = ['id','company_location','country_of_bean_origin','roasty',
+ 'floral',
+ 'intense',
+ 'spicy',
+ 'woody',
+ 'sticky',
+ 'coffee',
+ 'ingredient_Sweetener',
+ 'ingredient_Cocoa_Butter',
+ 'ingredient_salt'], axis = 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
